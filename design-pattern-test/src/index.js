@@ -1,31 +1,27 @@
-class JQuery {
-    constructor(seletor) {
-        let slice = Array.prototype.slice;
-        let dom = slice.call(document.querySelectorAll(seletor));
-        let len = dom ? dom.length : 0;
-        for(let i = 0; i < len; i++) {
-            this[i] = dom[i]
+function loadImg(src) {
+    let promise = new Promise(function(resolve, reject){
+        let img = document.createElement('img');
+        img.onload = function() {
+            resolve(img)
         }
-        this.length = len
-        this.seletor = seletor || ''
-    }
-    append(node) {
-        // ...
-    }
-    addClass(name) {
-        // ...
-    }
-    html(data) {
-        // ...
-    }
-    // 此处省略 N 个 API
+        img.onerror = function() {
+            reject('图片加载失败')
+        }
+        img.src = src
+    });
+    return promise;
 }
 
-window.$ = function (seletor) {
-    return new JQuery(seletor)
-}
+let src = 'https://p26-passport.byteacctimg.com/img/user-avatar/4d0a1fbdc3d957f62ecde912c80082b0~300x300.image'
+let result = loadImg(src);
 
-// 测试代码
-var $p = $('p')
-console.log($p)
-console.log($p.addClass)
+result.then(function(img){
+    // part 1
+    console.log(`width: ${img.width}`)
+    return img
+}).then(function(img){
+    // part 2
+    console.log(`height: ${img.height}`)
+}).catch(function(err){
+    console.log(err)
+})
