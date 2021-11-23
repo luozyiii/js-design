@@ -16,19 +16,32 @@
     </div>
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
     <script>
-        var div1 = document.getElementById('div1')
-        div1.addEventListener('click', function(e) {
-            var target = e.target
-            if(target.nodeName === 'A') {
-                console.log(target.innerHTML)
-            }
-        })
+        // var div1 = document.getElementById('div1')
+        // div1.addEventListener('click', function(e) {
+        //     var target = e.target
+        //     if(target.nodeName === 'A') {
+        //         console.log(target.innerHTML)
+        //     }
+        // })
 
-        $('#div1').click(function (){
-            setTimeout($.proxy(function() {
-                $(this).css('background-color', 'yellow')
-            }, this), 1000)
+        // $('#div1').click(function (){
+        //     setTimeout($.proxy(function() {
+        //         $(this).css('background-color', 'yellow')
+        //     }, this), 1000)
+        // })
+        // 自定义事件，自定义回调
+        var callbacks = $.Callbacks()
+        callbacks.add(function (info) {
+            console.log('fn1', info)
         })
+        callbacks.add(function (info) {
+            console.log('fn2', info)
+        })
+        callbacks.add(function (info) {
+            console.log('fn2', info)
+        })
+        callbacks.fire('gogogo')
+
     </script>
 </body>
 </html>
