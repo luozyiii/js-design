@@ -28,5 +28,10 @@ module.exports = {
         open: true, // 自动打开浏览器
         compress: true,
         port: 9000,
+        proxy: {
+            '/api/*': {
+                target: 'http://localhost:8880'
+            }
+        }
     },
 };

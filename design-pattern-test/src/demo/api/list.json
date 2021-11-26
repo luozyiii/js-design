@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "《JS 面试题》",
+        "price": 159,
+        "discount": 1
+    },
+    {
+        "id": 2,
+        "name": "《JS 高级面试题》",
+        "price": 366,
+        "discount": 1
+    },
+    {
+        "id": 3,
+        "name": "《React 模拟大众点评》",
+        "price": 248,
+        "discount": 0
+    },
+    {
+        "id": 4,
+        "name": "《JQuery 源码》",
+        "price": 69,
+        "discount": 0
+    }
+]
