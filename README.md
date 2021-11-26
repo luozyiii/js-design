@@ -51,3 +51,8 @@ JavaScript 设计模式系统讲解与应用
 ### [中介者模式](https://github.com/luozyiii/js-design/blob/main/22-%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F.md)
 
 ### [访问者模式和解释器模式](https://github.com/luozyiii/js-design/blob/main/23-%E8%AE%BF%E9%97%AE%E8%80%85%E6%A8%A1%E5%BC%8F%E5%92%8C%E8%A7%A3%E9%87%8A%E5%99%A8%E6%A8%A1%E5%BC%8F.md)
+
+
+## 综合应用
+
+### [JQuery做一个模拟购物车的示例](https://github.com/luozyiii/js-design/blob/main/24-JQuery%E5%81%9A%E4%B8%80%E4%B8%AA%E6%A8%A1%E6%8B%9F%E8%B4%AD%E7%89%A9%E8%BD%A6%E7%9A%84%E7%A4%BA%E4%BE%8B.md)
